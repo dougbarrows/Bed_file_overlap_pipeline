@@ -207,16 +207,5 @@ writeLines(capture.output(sessionInfo()), paste0(output_path, file_prefix, "_ses
 #tests
 
 
-input_paths <- c("~/Desktop/Data/agata_test/293Tpeaks_merged_ext.bed","~/Desktop/Data/agata_test/E56Qpeaks_merged_ext.bed")
-file_prefix <- "control_vs_E56Q"
-chip_names <- c("control", "E56Q")
-output_path <- ("~/Desktop/Data/agata_test/output/")
-genome <- "hg38"
-
-bed_overlap_unique_hg19_mm(input_paths, file_prefix, chip_names, output_path, genome, gene_ontology = FALSE)
-
-#LPS induced H3S28 test - mouse!
-
-
 
 ```
