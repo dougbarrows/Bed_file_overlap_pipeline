@@ -9,6 +9,12 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+### this function will take bed files as the input and find the overlaping peaks (with a specified allowable gap between peaks), and the unique peaks for each bed. It will then out put those peaks, and give you gene lists for genes that have these peaks near their promoters, and out put GO terms in a format that can be pasted into Revigo for a nice visual output. It will also output genomic annotation for the input beds.
+
+### you must give the path pointing to the files, give a prefix for the output files, give the path to the folder where you want the output to go, and give the names you want to appear on the annotation and overlap plots for each bed file.
+
+### the gene ontology can take some time, so you can include "gene_ontology = FALSE" in the function input to skip this part and it shouldn't take much time to run
+
 ```{r}
 
 bed_overlap_unique_hg19_mm  <- function(input_paths, file_prefix, chip_names, output_path, genome, gap, gene_ontology) {
@@ -215,7 +221,6 @@ genome <- "hg38"
 
 bed_overlap_unique_hg19_mm(input_paths, file_prefix, chip_names, output_path, genome, gene_ontology = FALSE)
 
-#edit test
 
 
 
